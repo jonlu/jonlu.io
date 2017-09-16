@@ -1,0 +1,13 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
