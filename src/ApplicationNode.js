@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import {Router} from 'react-router-dom'
 import history from 'services/history'
 import DevTools from './components/DevTools'
-import Routes from './rootRoutes'
+import App from 'views/App'
 import './styles/global.scss'
 
 const ApplicationNode = ({store}) => {
@@ -13,7 +13,7 @@ const ApplicationNode = ({store}) => {
       <div>
         {process.env.NODE_ENV !== 'production' && <DevTools /> }
         <Router history={history}>
-          <Routes />
+          <App />
         </Router>
       </div>
     </Provider>
