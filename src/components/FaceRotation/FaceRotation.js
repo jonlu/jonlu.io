@@ -8,7 +8,7 @@ import './faceRotation.scss'
 export default class FaceRotation extends Component {
   static propTypes = {}
 
-  static Angles = {angle1, angle2, angle3, angle4, angle5, angle6, angle7, angle8, angle9}
+  static Angles = [angle1, angle2, angle3, angle4, angle5, angle6, angle7, angle8, angle9]
 
   state = {
     client: {
@@ -19,8 +19,16 @@ export default class FaceRotation extends Component {
   }
 
   componentDidMount () {
-    this.el.addEventListener('mousemove', throttle(this.handleRotation, 50))
+    this.el.addEventListener('mousemove', throttle(this.handleHoverRotation, 50))
+    this.el.addEventListener('touchmove', throttle(this.handleTouchRotation, 50))
     window.addEventListener('resize', throttle(this.handleResize, 500))
+  }
+
+  shouldComponentUpdate (nextProps, nextState) {
+    if (this.state.pos === nextState.pos) {
+      return false
+    }
+    return true
   }
 
   handleResize = (se) => {
@@ -33,8 +41,18 @@ export default class FaceRotation extends Component {
     })
   }
 
-  handleRotation = (se) => {
-    let pos = Math.ceil(se.clientX / this.state.client.width * 9)
+  handleHoverRotation = (se) => {
+    this.setPos(se.clientX)
+  }
+
+  handleTouchRotation = (se) => {
+    if (se.touches.length === 1) {
+      this.setPos(se.touches[0].clientX)
+    }
+  }
+
+  setPos = (x) => {
+    let pos = Math.ceil(x / this.state.client.width * 9)
     pos = (pos === 0) ? 1 : pos
     this.setState({pos})
   }
@@ -42,7 +60,12 @@ export default class FaceRotation extends Component {
   render () {
     return (
       <div styleName='home' ref={el => { this.el = el }}>
-        <img src={FaceRotation.Angles[`angle${this.state.pos}`]} />
+        {FaceRotation.Angles.map((angle, i) => {
+          return <img
+            key={i}
+            src={angle}
+            style={{display: `${this.state.pos === i + 1 ? 'initial' : 'none'}`}} />
+        })}
       </div>
     )
   }
