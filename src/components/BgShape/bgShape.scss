@@ -1,0 +1,26 @@
+@import '~styles/vars.scss';
+.circle {
+  position: absolute;
+  height: 80vh;
+  width: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  .gradient {
+    all: inherit;
+    background: linear-gradient(141deg, #B7E6FE, #FFC3C3);
+
+
+  }
+
+  .noise {
+    all: inherit;
+    opacity: 1;
+    background-image: url(http://api.thumbr.it/whitenoise-100x100.png?background=ffffffff&noise=000000&density=50&opacity=30),
+      linear-gradient(141deg, $blue, $pink);
+    background-blend-mode: color-burn;
+  }
+
+}

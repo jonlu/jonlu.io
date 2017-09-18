@@ -53,7 +53,8 @@ export default class FaceRotation extends Component {
 
   setPos = (x) => {
     let pos = Math.ceil(x / this.state.client.width * 9)
-    pos = (pos === 0) ? 1 : pos
+    pos = (pos < 1) ? 1 : pos
+    pos = (pos > 9) ? 9 : pos
     this.setState({pos})
   }
 
