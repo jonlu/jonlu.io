@@ -1,0 +1,16 @@
+@import '~styles/mixins.scss';
+
+nav {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 50px;
+
+  @include tablet {
+    margin: 30px;
+  }
+
+  @include phone {
+    margin: 20px;
+  }
+}

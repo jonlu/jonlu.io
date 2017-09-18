@@ -1,0 +1,47 @@
+@import '~styles/vars.scss';
+
+.icon {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  transition: all 500ms ease;
+  cursor: pointer;
+  z-index: 10;
+
+  span {
+    background-color: $dark-grey;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    transform: translateY(10px);
+    transition: all 300ms ease;
+  }
+}
+
+.menu-icon {
+
+  .second {
+      transform: translateY(0);
+    }
+
+    .third{
+      transform: translateY(20px);
+    }
+}
+
+.back-icon {
+  transform: rotate(180deg) translateX(-3px);
+
+  .third {
+    transform: rotate(-45deg) translate(3px, 22px);
+    width: 15px;
+  }
+  .second {
+    transform: rotate(45deg) translate(17px, -8px);
+    width: 15px
+  }
+
+}

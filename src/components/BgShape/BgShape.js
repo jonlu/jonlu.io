@@ -7,9 +7,8 @@ export default class BgShape extends Component {
   state = {}
   render () {
     return (
-      <div styleName='circle'>
-        <div styleName='noise' />
-
+      <div styleName='container'>
+        <div styleName='circle' />
       </div>
     )
   }
