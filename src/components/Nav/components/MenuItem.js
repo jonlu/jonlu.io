@@ -5,7 +5,7 @@ import './menuItem.scss'
 
 const MenuItem = ({children, inputRef}) => {
   return (
-    <Link to={children}><div ref={inputRef} styleName='item'>{children}</div></Link>
+    <div ref={inputRef} styleName='item'><Link to={children}>{children}</Link></div>
   )
 }
 MenuItem.propTypes = {

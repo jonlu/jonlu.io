@@ -3,8 +3,17 @@
   width: 100vw;
   position: relative;
   overflow: hidden;
+  user-drag: none;
+  user-select: none;
 
   img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
     filter: drop-shadow(75px 75px 50px rgba(0, 0, 0, .35));
     position: absolute;
     height: 100%;

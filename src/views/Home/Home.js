@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import FaceRotation from 'components/FaceRotation'
 import BgShape from 'components/BgShape'
-// import PropTypes from 'prop-types'
+import {Name} from './components'
+// import PropTypes ferom 'prop-types'
 
 export default class Home extends Component {
   static propTypes = {}
@@ -11,6 +12,7 @@ export default class Home extends Component {
       <div>
         <BgShape />
         <FaceRotation />
+        <Name />
       </div>
     )
   }
