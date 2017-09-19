@@ -21,7 +21,7 @@
     "test:unit": "react-scripts test:unit",
     "test:watch": "react-scripts test:watch",
     "test:lint": "./node_modules/.bin/eslint . --color; exit 0",
-    "deploy": "react-scripts build && surge --domain jonlu.surge.sh",
+    "deploy": "react-scripts build && surge ./build jonlu.io",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
