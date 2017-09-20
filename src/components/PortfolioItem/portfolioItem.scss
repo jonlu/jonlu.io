@@ -1,4 +1,5 @@
 @import '~styles/mixins.scss';
+@import '~styles/vars.scss';
 .portfolio-item {
   position: relative;
   margin-bottom: 175px;
@@ -7,9 +8,11 @@
     object-fit: cover;
     min-width: 100%;
     height: 350px;
+    object-position: 50% 50%;
   }
 
   article {
+    box-sizing: content-box;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,11 +41,22 @@
     article {
       position: static;
       box-shadow: none;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 50px;
+    }
+  }
+
+  @include phone {
+    article {
+      padding: 25px;
     }
   }
 }
 
 .number {
+  color: white;
+  text-shadow: 7px 7px $dark-grey;
   letter-spacing: 10px;
   font-weight: 300;
   position: absolute;
