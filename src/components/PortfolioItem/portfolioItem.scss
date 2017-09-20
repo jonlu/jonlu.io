@@ -1,0 +1,51 @@
+@import '~styles/mixins.scss';
+.portfolio-item {
+  position: relative;
+  margin-bottom: 175px;
+
+  img {
+    width: 100%;
+  }
+
+  article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    width: 50%;
+    height: 50%;
+    box-shadow: 3px 3px 17px #888;
+    padding: 25px;
+
+    h3 {
+      font-weight: 400;
+      text-transform: uppercase;
+
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #777;
+      letter-spacing: 1px;
+    }
+  }
+
+  @include tablet {
+    article {
+      position: static;
+      box-shadow: none;
+    }
+  }
+}
+
+.number {
+  letter-spacing: 10px;
+  font-weight: 300;
+  position: absolute;
+  left: 50px;
+  top: -75px;
+  font-size: 150px;
+}
+

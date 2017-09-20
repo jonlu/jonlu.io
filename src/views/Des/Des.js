@@ -1,12 +1,15 @@
 import React, {Component} from 'react'
-// import PropTypes from 'prop-types'
+import PortfolioItem from 'components/PortfolioItem'
+import './des.scss'
 
 export default class Des extends Component {
-  static propTypes = {}
   state = {}
   render () {
     return (
-      <div>Des</div>
+      <div className='page-container'>
+        <h1 styleName='header'>Design</h1>
+        <PortfolioItem /><PortfolioItem />
+      </div>
     )
   }
 }
