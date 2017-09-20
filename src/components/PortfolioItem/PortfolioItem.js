@@ -4,21 +4,25 @@ import './portfolioItem.scss'
 
 export default class PortfolioItem extends Component {
   static propTypes = {
-    img: PropTypes.string,
-    desc: PropTypes.string,
-    link: PropTypes.string,
-    index: PropTypes.number
+    item: PropTypes.shape({
+      thumb: PropTypes.string,
+      desc: PropTypes.string,
+      title: PropTypes.string,
+      link: PropTypes.string
+    }),
+    index: PropTypes.string
   }
   state = {}
   render () {
-    const {img, desc, index} = this.props
+    const {thumb, desc, title} = this.props.item
+    const {index} = this.props
     return (
       <section>
         <div styleName='portfolio-item'>
-          <img src={img} />
+          <img src={thumb} />
           <span styleName='number'>{index}</span>
           <article>
-            <h3>{index} | Primaries</h3>
+            <h3>{index} | {title}</h3>
             <p>{desc}</p>
           </article>
         </div>

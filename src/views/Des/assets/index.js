@@ -11,47 +11,56 @@ import visiblelanguage from './visiblelanguage/visiblelanguage1.jpg'
 const assets = [
   {
     thumb: book,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A study on blending design and legibility together on a page. Based on Paul Rand\'s essay, Design and the Play Instinct.',
+    title: 'Design and the Play Instinct',
     link: ''
   },
   {
     thumb: bowie,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'An homage to the late David Bowie, crafted with his free spirit and colorful music in mind. ',
+    title: 'Bowie',
     link: ''
   },
   {
     thumb: branding,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A redesign of a generic language translation brand. Graphics intended and prepared for use in a graphics standards manual.',
+    title: 'Translate Co',
     link: ''
   },
   {
     thumb: event,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'Dated and created for the annual UC Davis fashion show, this poster highlights the colorful student-crafted dresses modeled on the runway.',
+    title: 'Fashion Show Poster',
     link: ''
   },
   {
     thumb: letters,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A detailed study on letterforms and how they interact in a small space while mainting recognizability. This series in particular takes a closer look at Bodoni 72.',
+    title: 'Abstract Letterforms',
     link: ''
   },
   {
     thumb: lowpoly,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'The Matterhorn captured in low-poly. Not once, not twice, but four times. Completed as a study on color theory & interaction.',
+    title: 'Low-Poly Colors',
     link: ''
   },
   {
     thumb: primaries1,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A series of abstract paintings using red, blue, yellow, white, and black on top of 6"x6" bristol pad.',
+    title: 'Primaries No.1',
     link: ''
   },
   {
     thumb: primaries2,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A secondary series of abstract paintings using only red, blue, and yellow. This time with more focus on motion and texture.',
+    title: 'Primaries No.2',
     link: ''
   },
   {
     thumb: visiblelanguage,
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisl id mattis blandit. Nullam laoreet semper turpis, eget ultrices sapien laoreet nec. Sed auctor convallis turpis vel cursus. Sed semper rhoncus dui id lobortis. Cras dictum vulputate sapien, a volutpat velit condimentum quis.',
+    desc: 'A study on type hierarchy when limited (and unlimited) by font-weight and size. Incremental increases in weight & size diversity yield much better results.',
+    title: 'Visible Language',
     link: ''
   }
 ]
