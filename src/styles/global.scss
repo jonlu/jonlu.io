@@ -1,5 +1,6 @@
 // All classes declared here will be global (use className attribute)
 // It's imported by default in ApplicationNode.js. No need to import elsewhere.
+@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 @import './vars.scss';
 * {
   box-sizing: border-box;
@@ -24,4 +25,44 @@ p {
   max-width: 800px;
   margin: auto;
   margin-top: 45px;
+}
+
+.image-gallery {
+  height: 100%;
+}
+.image-gallery-content {
+  height: 100%;
+}
+.image-gallery-slide-wrapper {
+  height: 100%;
+}
+.image-gallery-swipe {
+  height: 100%;
+}
+.image-gallery-slides {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // &.right {
+  //   display: block;
+  //   align-self: center;
+  //   bottom: 0;
+  //   right: 0;
+  //   margin: auto;
+  // }
+}
+
+.image-gallery-slide {
+  margin: auto;
+  top:auto;
+  z-index: 2;
+}
+
+.image-gallery-index {
+  background: none;
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
 }

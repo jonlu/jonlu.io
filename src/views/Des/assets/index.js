@@ -1,4 +1,5 @@
 import book from './book/book1.jpg'
+import bookImgs from './book'
 import bowie from './bowie/bowie1.jpg'
 import branding from './branding/branding1.jpg'
 import event from './event/event1.jpg'
@@ -11,6 +12,7 @@ import visiblelanguage from './visiblelanguage/visiblelanguage1.jpg'
 const assets = [
   {
     thumb: book,
+    gallery: bookImgs,
     desc: 'A study on blending design and legibility together on a page. Based on Paul Rand\'s essay, Design and the Play Instinct.',
     title: 'Design and the Play Instinct',
     link: ''
