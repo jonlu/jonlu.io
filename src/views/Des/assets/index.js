@@ -1,6 +1,7 @@
 import book from './book/book1.jpg'
 import bookImgs from './book'
 import bowie from './bowie/bowie1.jpg'
+import bowieImgs from './bowie'
 import branding from './branding/branding1.jpg'
 import event from './event/event1.jpg'
 import letters from './letters/letters1.jpg'
@@ -19,6 +20,7 @@ const assets = [
   },
   {
     thumb: bowie,
+    gallery: bowieImgs,
     desc: 'An homage to the late David Bowie, crafted with his free spirit and colorful music in mind. ',
     title: 'Bowie',
     link: ''
