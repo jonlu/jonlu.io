@@ -13,7 +13,7 @@
     cursor: pointer;
   }
 
-  article {
+  .info {
     box-sizing: content-box;
     position: absolute;
     top: 50%;
@@ -23,12 +23,36 @@
     height: 50%;
     box-shadow: 3px 3px 17px #888;
     padding: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    .links {
+      span {
+        font-size: 19px;
+        border-bottom: 3px solid #555;
+        margin-right: 20px;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $blue;
+        }
+      }
+      a {
+        text-decoration: none;
+        font-size: 19px;
+        border-bottom: 3px solid #555;
+        &:hover {
+          border-color: $blue;
+        }
+      }
+    }
 
     h3 {
+      padding-bottom: 0;
       font-weight: 400;
       text-transform: uppercase;
       font-size: 30px;
-      padding-bottom: 20px;
     }
 
     p, a {
@@ -40,10 +64,11 @@
 
   @include tablet {
     margin-bottom: 150px;
-    article {
+    .info {
       position: static;
       box-shadow: none;
       width: 100%;
+      height: 250px;
       box-sizing: border-box;
       padding: 50px;
     }
@@ -51,13 +76,14 @@
 
   @include phone {
     margin-bottom: 100px;
-    article {
+    .info {
       padding: 25px;
     }
   }
 }
 
 .number {
+  font-family: 'Saira Extra Condensed', sans-serif;
   color: white;
   text-shadow: 7px 7px $dark-grey;
   letter-spacing: 10px;

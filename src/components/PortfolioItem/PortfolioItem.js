@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Gallery from './components/Gallery'
 import FaExternalLink from 'react-icons/lib/fa/external-link'
+import MdFullscreen from 'react-icons/lib/go/screen-full'
 import './portfolioItem.scss'
 
 export default class PortfolioItem extends Component {
@@ -37,14 +38,16 @@ export default class PortfolioItem extends Component {
         <div styleName='portfolio-item'>
           <img src={thumb} onClick={this.handleGalleryOpen} />
           <span styleName='number'>{index}</span>
-          <article>
+          <article styleName='info'>
             <h3>{index} | {title}</h3>
             <p>{desc}</p>
-            <br />
-            {link
-              ? <div><a href={link}>View Project &nbsp;<FaExternalLink /></a></div>
-              : null
-            }
+            <div styleName='links'>
+              <span onClick={this.handleGalleryOpen}>Gallery &nbsp;<MdFullscreen /></span>
+              {link
+                ? <a href={link}>View Project &nbsp;<FaExternalLink /></a>
+                : null
+              }
+            </div>
           </article>
         </div>
         {this.state.showGallery
