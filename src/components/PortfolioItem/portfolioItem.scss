@@ -2,7 +2,7 @@
 @import '~styles/vars.scss';
 .portfolio-item {
   position: relative;
-  margin-bottom: 175px;
+  margin-bottom: 200px;
 
   img {
     object-fit: cover;
@@ -10,6 +10,7 @@
     max-width: 100%;
     height: 350px;
     object-position: 50% 50%;
+    cursor: pointer;
   }
 
   article {
@@ -26,12 +27,11 @@
     h3 {
       font-weight: 400;
       text-transform: uppercase;
-
       font-size: 30px;
       padding-bottom: 20px;
     }
 
-    p {
+    p, a {
       line-height: 1.75;
       color: #555;
       font-size: 17px;
@@ -39,6 +39,7 @@
   }
 
   @include tablet {
+    margin-bottom: 150px;
     article {
       position: static;
       box-shadow: none;
@@ -49,6 +50,7 @@
   }
 
   @include phone {
+    margin-bottom: 100px;
     article {
       padding: 25px;
     }

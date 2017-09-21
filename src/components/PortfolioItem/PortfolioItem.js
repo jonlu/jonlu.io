@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Gallery from './components/Gallery'
+import FaExternalLink from 'react-icons/lib/fa/external-link'
 import './portfolioItem.scss'
 
 export default class PortfolioItem extends Component {
@@ -10,7 +11,8 @@ export default class PortfolioItem extends Component {
       desc: PropTypes.string,
       title: PropTypes.string,
       link: PropTypes.string,
-      gallery: PropTypes.arrayOf(PropTypes.object)
+      gallery: PropTypes.arrayOf(PropTypes.object),
+      logos: PropTypes.string
     }),
     index: PropTypes.string
   }
@@ -28,7 +30,7 @@ export default class PortfolioItem extends Component {
   }
 
   render () {
-    const {thumb, desc, title, gallery} = this.props.item
+    const {thumb, desc, title, gallery, link} = this.props.item
     const {index} = this.props
     return (
       <section>
@@ -38,6 +40,11 @@ export default class PortfolioItem extends Component {
           <article>
             <h3>{index} | {title}</h3>
             <p>{desc}</p>
+            <br />
+            {link
+              ? <div><a href={link}>View Project &nbsp;<FaExternalLink /></a></div>
+              : null
+            }
           </article>
         </div>
         {this.state.showGallery

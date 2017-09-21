@@ -22,7 +22,7 @@ p {
 }
 
 .page-container {
-  max-width: 800px;
+  max-width: 850px;
   margin: auto;
   margin-top: 45px;
 }
@@ -57,6 +57,8 @@ p {
 }
 
 .image-gallery-image {
+  display: flex;
+  justify-content: center;
   img {
     width: auto;
     max-width: 100%;
@@ -68,17 +70,29 @@ p {
 .image-gallery-slide {
   background: none;
   max-height: 100%;
-  width: auto;
   margin: auto;
   top:auto;
   z-index: 2;
 }
 
 .image-gallery-index {
-  background: none;
+  background: rgba(50, 50, 50, .4);
   top: auto;
   bottom: 20px;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
+}
+
+.image-gallery-left-nav {
+  padding: 25vh 45vw 25vh 3vw;
+  cursor: w-resize;
+
+  &:after {
+    color: #444;
+  }
+}
+.image-gallery-right-nav {
+  padding: 25vh 3vw 25vh 45vw;
+  cursor: e-resize;
 }
