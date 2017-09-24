@@ -2,6 +2,7 @@
 // It's imported by default in ApplicationNode.js. No need to import elsewhere.
 @import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 @import './vars.scss';
+@import './mixins.scss';
 
 * {
   box-sizing: border-box;
@@ -29,6 +30,13 @@ p, a {
   margin-top: 45px;
 }
 
+.page-header {
+  padding-bottom: 100px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+
 .image-gallery {
 
   height: 100%;
@@ -47,7 +55,7 @@ p, a {
 
 .image-gallery-swipe {
   height: 100%;
-
+  z-index: 100;
 }
 
 .image-gallery-slides {
@@ -66,6 +74,7 @@ p, a {
     max-width: 100%;
     max-height: 100vh;
     object-fit: contain;
+
   }
 }
 
@@ -74,7 +83,7 @@ p, a {
   max-height: 100%;
   margin: auto;
   top:auto;
-  z-index: 2;
+
 }
 
 .image-gallery-index {
@@ -89,12 +98,14 @@ p, a {
 .image-gallery-left-nav {
   padding: 25vh 45vw 25vh 3vw;
   cursor: w-resize;
-
-  &:after {
-    color: #444;
+  @include tablet {
+    display: none;
   }
 }
 .image-gallery-right-nav {
   padding: 25vh 3vw 25vh 45vw;
   cursor: e-resize;
+  @include tablet {
+    display: none;
+  }
 }

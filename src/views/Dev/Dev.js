@@ -1,12 +1,18 @@
 import React, {Component} from 'react'
-// import PropTypes from 'prop-types'
+import PortfolioItem from 'components/PortfolioItem'
+import assets from './assets'
+import {pad} from 'services/format'
 
 export default class Dev extends Component {
-  static propTypes = {}
   state = {}
   render () {
     return (
-      <div>Dev</div>
+      <div className='page-container'>
+        <h1 className='page-header'>Develop</h1>
+        {assets.map((item, i) => {
+          return <PortfolioItem item={item} key={i} index={pad(i + 1, 2)} />
+        })}
+      </div>
     )
   }
 }

@@ -1,3 +1,5 @@
+@import '~styles/mixins.scss';
+
 .no-clickthrough {
   z-index: 10;
   position: fixed;
@@ -11,11 +13,29 @@
   background: rgba(0, 0, 0, .9);
 }
 
-.close {
+.click-close {
   z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 100vh;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.close-icon {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top:0;
+  margin: 35px;
+  cursor: pointer;
+  color: white;
+
+  @include phone {
+    margin: 20px;
+  }
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import ImageGallery from 'react-image-gallery'
+import CloseIcon from 'react-icons/lib/md/close'
 // import TransitionInPlace from 'components/TransitionInPlace'
 import './gallery.scss'
 
@@ -27,7 +28,7 @@ export default class Gallery extends Component {
   render () {
     return (
       <div styleName='no-clickthrough'>
-        <div onClick={this.handleClose} styleName='close' />
+        <div onClick={this.handleClose} styleName='click-close' />
         <ImageGallery
           items={this.props.items}
           showThumbnails={false}
@@ -35,6 +36,7 @@ export default class Gallery extends Component {
           showPlayButton={false}
           showIndex
         />
+        <span styleName='close-icon' onClick={this.handleClose}>{<CloseIcon size={40}/>}</span>
       </div>
     )
   }

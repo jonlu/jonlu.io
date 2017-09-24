@@ -5,6 +5,7 @@
   margin-bottom: 200px;
 
   img {
+    display: block;
     object-fit: cover;
     width: 100%;
     max-width: 100%;
@@ -28,24 +29,17 @@
     justify-content: space-between;
 
     .links {
-      span {
+      span, a {
         font-size: 19px;
         border-bottom: 3px solid #555;
         margin-right: 20px;
         cursor: pointer;
-
-        &:hover {
-          border-color: $blue;
-        }
-      }
-      a {
         text-decoration: none;
-        font-size: 19px;
-        border-bottom: 3px solid #555;
         &:hover {
           border-color: $blue;
         }
       }
+
     }
 
     h3 {

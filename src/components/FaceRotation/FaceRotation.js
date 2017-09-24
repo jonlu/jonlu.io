@@ -24,6 +24,12 @@ export default class FaceRotation extends Component {
     window.addEventListener('resize', throttle(this.handleResize, 500))
   }
 
+  componentWillUnmount () {
+    this.el.removeEventListener('mousemove', throttle(this.handleHoverRotation, 50))
+    this.el.removeEventListener('touchmove', throttle(this.handleTouchRotation, 50))
+    window.removeEventListener('resize', throttle(this.handleResize, 500))
+  }
+
   shouldComponentUpdate (nextProps, nextState) {
     if (this.state.pos === nextState.pos) {
       return false
