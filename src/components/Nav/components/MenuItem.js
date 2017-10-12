@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import './menuItem.scss'
 
-const MenuItem = ({children, inputRef}) => {
+const MenuItem = ({children, inputRef, cb}) => {
   return (
-    <div ref={inputRef} styleName='item'><Link to={children}>{children}</Link></div>
+    <div onClick={cb} ref={inputRef} styleName='item'><Link to={children}>{children}</Link></div>
   )
 }
 MenuItem.propTypes = {
   children: PropTypes.node,
-  inputRef: PropTypes.func
+  inputRef: PropTypes.func,
+  cb: PropTypes.func
 }
 export default MenuItem

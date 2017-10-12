@@ -1,13 +1,13 @@
-import Des from './Des'
-import Dev from './Dev'
+import Design from './Design'
+import Develop from './Develop'
 import Home from './Home'
-import Me from './Me'
-import Pic from './Pic'
+import About from './About'
+import Photo from './Photo'
 
 export {
-  Des,
-  Dev,
+  Design,
+  Develop,
   Home,
-  Me,
-  Pic
+  About,
+  Photo
 }

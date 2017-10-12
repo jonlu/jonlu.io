@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import PortfolioItem from 'components/PortfolioItem'
 import assets from './assets'
 import {pad} from 'services/format'
-import './des.scss'
+import './design.scss'
 
-export default class Des extends Component {
+export default class Design extends Component {
   state = {}
   render () {
     return (

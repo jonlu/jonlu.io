@@ -36,7 +36,7 @@ export default class Gallery extends Component {
           showPlayButton={false}
           showIndex
         />
-        <span styleName='close-icon' onClick={this.handleClose}>{<CloseIcon size={40}/>}</span>
+        <span styleName='close-icon' onClick={this.handleClose}>{<CloseIcon size={40} />}</span>
       </div>
     )
   }

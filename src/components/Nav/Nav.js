@@ -9,7 +9,7 @@ export default class Nav extends Component {
     isOpen: false
   }
 
-  static MenuItems = ['dev', 'des', 'pic', 'me']
+  static MenuItems = ['home', 'design', 'develop', 'photo', 'about']
 
   itemRefs = []
 
@@ -40,7 +40,7 @@ export default class Nav extends Component {
       <nav>
         <MenuIcon cb={this.handleToggle} open={this.state.isOpen} />
         {Nav.MenuItems.map((item, i) => {
-          return <MenuItem inputRef={this.setRef(i)} key={i}>{item}</MenuItem>
+          return <MenuItem cb={this.handleToggle} inputRef={this.setRef(i)} key={i}>{item}</MenuItem>
         })}
       </nav>
     )

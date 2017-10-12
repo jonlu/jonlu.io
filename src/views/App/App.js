@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import Nav from 'components/Nav'
-import {Home, Des, Dev} from 'views'
+import {Home, Design, Develop, Photo, About} from 'views'
 import './app.scss'
 
 class App extends Component {
@@ -11,8 +11,11 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/des' component={Des} />
-          <Route path='/dev' component={Dev} />
+          <Redirect from='/home' to='/' />
+          <Route path='/design' component={Design} />
+          <Route path='/develop' component={Develop} />
+          <Route path='/photo' component={Photo} />
+          <Route path='/about' component={About} />
         </Switch>
       </div>
     )

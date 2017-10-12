@@ -3,7 +3,7 @@ import PortfolioItem from 'components/PortfolioItem'
 import assets from './assets'
 import {pad} from 'services/format'
 
-export default class Dev extends Component {
+export default class Develop extends Component {
   state = {}
   render () {
     return (
