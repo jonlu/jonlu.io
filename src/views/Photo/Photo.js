@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import assets from './assets'
+import './photo.scss'
 // import PropTypes from 'prop-types'
 
 export default class Photo extends Component {
@@ -6,7 +8,15 @@ export default class Photo extends Component {
   state = {}
   render () {
     return (
-      <div>Photo</div>
+      <div className='page-container'>
+        <h1 className='page-header'>Photography</h1>
+        <div styleName='grid'>
+          {assets.map((item, i) => {
+            return <img styleName='square-image' src={item} />
+          })}
+        </div>
+
+      </div>
     )
   }
 }

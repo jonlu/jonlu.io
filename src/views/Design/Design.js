@@ -9,7 +9,7 @@ export default class Design extends Component {
   render () {
     return (
       <div className='page-container'>
-        <h1 styleName='header'>Design</h1>
+        <h1 className='page-header'>Design</h1>
         {assets.map((item, i) => {
           return <PortfolioItem item={item} key={i} index={pad(i + 1, 2)} />
         })}
